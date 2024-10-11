@@ -21,15 +21,17 @@
             height: 100vh;
             overflow-y: scroll;
             scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
         }
         #mobile-slides .slide {
-            height: auto;
-            margin: 0;
-            padding: 0;
+            flex-shrink: 0;
+            height: 100vh;
+            overflow: hidden;
         }
         #mobile-slides .slide iframe {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             border: none;
         }
     </style>
@@ -67,7 +69,7 @@
 
             if (isMobile()) {
                 desktopSlides.style.display = 'none';
-                mobileSlides.style.display = 'block';
+                mobileSlides.style.display = 'flex';
             } else {
                 desktopSlides.style.display = 'block';
                 mobileSlides.style.display = 'none';
