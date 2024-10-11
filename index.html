@@ -11,12 +11,27 @@
             overflow-y: scroll;
             scroll-behavior: smooth;
         }
-        .slide {
+        #desktop-slides .slide {
             height: 100vh;
             margin: 0;
             padding: 0;
         }
-        iframe { border: none; width: 100%; height: 100%; }
+        #desktop-slides iframe { border: none; width: 100%; height: 100%; }
+        #mobile-slides {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+        #mobile-slides .slide {
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        #mobile-slides .slide iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -38,16 +53,7 @@
         <div class="slide"><iframe src="https://www.canva.com/design/DAGTNzGtxqk/Tw0bA4OS_pjTcvDt89AhsA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
         <div class="slide"><iframe src="https://www.canva.com/design/DAGTN_r3vWA/CfwHDynIbPq8vXJ5wzpApw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
         <div class="slide"><iframe src="https://www.canva.com/design/DAGTN280Lko/-sEeUOY7CmSKsmZH02c6Uw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide">
-            <div style="position: relative; width: 100%; height: 0; padding-top: 177.7778%;
-            padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-            border-radius: 8px; will-change: transform;">
-            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.canva.com/design/DAGTNwxybYQ/RO7M5vboTPQPrVQkb0QZlA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-            </iframe>
-            </div>
-            <a href="https://www.canva.com/design/DAGTNwxybYQ/RO7M5vboTPQPrVQkb0QZlA/view?utm_content=DAGTNwxybYQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Mobile Slide 8</a> by george contreras
-        </div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNwxybYQ/RO7M5vboTPQPrVQkb0QZlA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
     </div>
 
     <script>
