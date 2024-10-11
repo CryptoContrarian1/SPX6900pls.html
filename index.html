@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SPX6900 Slides</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        #desktop-slides, #mobile-slides {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y proximity;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            height: 100vh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+        iframe { border: none; width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="desktop-slides">
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTJauNaYI/z-1P0ZAWg1SHory4gHhkrQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNQRw59A/kPk0PUfxsFYnTjOvuaA2iA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+    </div>
+    <div id="mobile-slides" style="display: none;">
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTOEqSeac/yrXx6MSHe5sIeoIpTbGL-w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTOKYxFFE/w71D8Kr3xstu6t4ObrDYyw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTOCyLsE8/juhuM_mrWQjkzx6RGOHc0A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTOAT5DNA/1RY5-YQ_fKbWSkRRtIPWYA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNzGtxqk/Tw0bA4OS_pjTcvDt89AhsA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTN_r3vWA/CfwHDynIbPq8vXJ5wzpApw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTN280Lko/-sEeUOY7CmSKsmZH02c6Uw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNwxybYQ/RO7M5vboTPQPrVQkb0QZlA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+    </div>
+
+    <script>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function showAppropriateSlides() {
+            const desktopSlides = document.getElementById('desktop-slides');
+            const mobileSlides = document.getElementById('mobile-slides');
+
+            if (isMobile()) {
+                desktopSlides.style.display = 'none';
+                mobileSlides.style.display = 'block';
+            } else {
+                desktopSlides.style.display = 'block';
+                mobileSlides.style.display = 'none';
+            }
+        }
+
+        window.onload = showAppropriateSlides;
+        window.onresize = showAppropriateSlides;
+    </script>
+</body>
+</html>
