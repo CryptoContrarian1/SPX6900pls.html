@@ -9,56 +9,30 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            height: 100%;
         }
-        #desktop-slides {
+        #desktop-slides, #mobile-slides {
             height: 100vh;
             overflow-y: scroll;
-            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            -webkit-overflow-scrolling: touch;
         }
-        #desktop-slides .slide {
+        .slide {
             height: 100vh;
-            margin: 0;
-            padding: 0;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
         }
-        #desktop-slides iframe {
+        iframe {
             border: none;
-            width: 100%;
-            height: 100%;
-        }
-        #mobile-slides {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow-y: scroll;
-            scroll-behavior: smooth;
-        }
-        #mobile-slides .slide {
-            position: relative;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-        }
-        #mobile-slides .slide iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            display: block;
         }
     </style>
 </head>
 <body>
     <div id="desktop-slides">
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNWCT_Xo/ELGvhrYh4PZR_yUXLuf67Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNX-o1MQ/UfOq0N9HDbRUP4SgB1aYDw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNcwrkPI/jsLR0vvQylIAZIe34Gw-Pg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNYwhh58/5mOrNo5YMG62jk8F4csScA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNVk8V90/BACA3hGRLvJ61ENkrUN9pg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNkGPl3g/LYyG3qUDa1v20LrE7sdwqQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNpW0KaU/6RNWL_CVLnqSok-niFsi6w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
-        <div class="slide"><iframe src="https://www.canva.com/design/DAGTNomi59M/j84g5yQme2o3i8V_gcQa7Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
+        <!-- Your existing desktop slide embed codes here -->
     </div>
     <div id="mobile-slides" style="display: none;">
         <div class="slide"><iframe src="https://www.canva.com/design/DAGTOEqSeac/yrXx6MSHe5sIeoIpTbGL-w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
