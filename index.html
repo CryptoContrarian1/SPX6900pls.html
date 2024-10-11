@@ -11,15 +11,30 @@
             overflow-y: auto; 
             scroll-behavior: smooth;
         }
-        .slide { 
+        #desktop-slides .slide { 
             width: 100%; 
-            height: 100vh; 
-            scroll-snap-align: start;
+            height: 100vh;
         }
-        iframe { 
+        #desktop-slides iframe { 
             border: none; 
             width: 100%; 
             height: 100%; 
+            display: block;
+        }
+        #mobile-slides { 
+            height: 100vh; 
+            overflow-y: auto; 
+            scroll-behavior: smooth;
+        }
+        #mobile-slides .slide { 
+            width: 100%; 
+            height: 101vh; /* Slightly taller than viewport */
+            margin-bottom: -1vh; /* Negative margin to overlap slides */
+        }
+        #mobile-slides iframe { 
+            border: none; 
+            width: 100%; 
+            height: 101%; /* Slightly taller than container */
             display: block;
         }
     </style>
